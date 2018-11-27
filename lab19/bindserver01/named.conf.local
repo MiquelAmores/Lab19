@@ -1,0 +1,43 @@
+
+zone "jiznardo.org" {
+    type master;
+    file "/etc/bind/zones/db.jiznardo.org"; # zone file path
+    allow-transfer { 72.28.1.98; 72.28.1.97; };           # ns2 private IP address - secondary
+#   allow-transfer { none; };           # ns2 private IP address - secondary
+};
+
+zone "1.28.72.in-addr.arpa" {
+    type master;
+    file "/etc/bind/zones/db.1.28.72";  # /24 subnet
+    allow-transfer { 72.28.1.98; 72.28.1.97; };           # ns2 private IP address - secondary
+#   allow-transfer { none; };           # ns2 private IP address - secondary
+};
+
+zone "demo.lab19" {
+    type master;
+    file "/etc/bind/zones/db.demo.lab19"; # zone file path
+    allow-transfer { 42.28.1.98; 42.28.1.97; };           # ns2 private IP address - secondary
+#   allow-transfer { none; };           # ns2 private IP address - secondary
+};
+
+zone "1.28.42.in-addr.arpa" {
+    type master;
+    file "/etc/bind/zones/db.1.28.42";  # /24 subnet
+    allow-transfer { 42.28.1.98; 42.28.1.97; };           # ns2 private IP address - secondary
+#   allow-transfer { none; };           # ns2 private IP address - secondary
+};
+
+zone "mamores.org" {
+    type master;
+    file "/etc/bind/zones/db.mamores.org"; # zone file path
+    allow-transfer { 30.28.1.98; 30.28.1.97; };           # ns2 private IP address - secondary
+#   allow-transfer { none; };           # ns2 private IP address - secondary
+};
+
+zone "1.28.30.in-addr.arpa" {
+    type master;
+    file "/etc/bind/zones/db.1.28.30";  # /24 subnet
+    allow-transfer { 30.28.1.98; 30.28.1.97; };           # ns2 private IP address - secondary
+#   allow-transfer { none; };           # ns2 private IP address - secondary
+};
+
